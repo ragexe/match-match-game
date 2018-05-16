@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Match Game</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <link rel="stylesheet" href="css/styles.css" type="text/css">
+    <link rel="stylesheet" href="css/animate.css" type="text/css">
+    <link rel="shortcut icon" href="./images/favicon.png" type="image/x-icon">
+
+    <!--[if lt IE 9]>
+    <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+</head>
+<body>
+
+<header class="header wrapper">
+    <h1 class="font-effect-anaglyph">Match Game</h1>
+</header>
+
+<main class="wrapper">
+    <aside class="game-menu element">
+        <ul>
+            <li>
+                <button id="_new-game-btn" class="btn btn-start border2 border222">New game</button>
+            </li>
+
+            <li>
+                <button id="_stop-game-btn" class="btn btn-stop border2 border222 hidden">Stop game</button>
+            </li>
+
+            <li>
+                <div class="btn border2 border222">Difficulty <span class="badge" id="_difficulty-badge">8</span>
+                    <div class="styled-select rounded">
+                        <select id="_game-difficulty-select" title="difficulty">
+                            <optgroup label="Select your difficulty">
+                                <option value="8" selected>Newbie</option>
+                                <option value="12">Amateur</option>
+                                <option value="24">Pro</option>
+                                <option value="32">Hangover</option>
+                                <option value="48">Hell</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+                <div class="btn border2 border222">Skirt</span>
+                    <div class="styled-select rounded">
+                        <select id="_game-skirt-select" title="skirt" disabled>
+                            <optgroup label="Select skirt">
+                                <option value="default" selected>Default</option>
+                                <option value="cardpack-02">Custom</option>
+                            </optgroup>
+                        </select>
+                    </div>
+                </div>
+            </li>
+
+            <li>
+
+            </li>
+
+            <li>
+                <div class="btn border2 border222 disabled">Score: <span id="timer_inp">00:00</span></div>
+            </li>
+        </ul>
+    </aside>
+
+    <section class="game-field element" id="_game-field">
+        <article>
+            <h2>Hello!</h2>
+            <p>There is a simple game where you need to guess <strong>two cards with identical</strong> pictures on it.</p>
+            <p>To play just choose available "Difficulty" and press "Start game".</p>
+            <p>"Score" - it's just the time you spent to win. The <strong>less</strong> the better.</p>
+            <p>Also If you want you can change skirt of cards with "Skirt"-select button.</p>
+            <p>Be curious!</p>
+        </article>
+    </section>
+</main>
+
+<footer class="wrapper">
+    <span>© 2017 ragexe</span>
+</footer>
+<script type="module" src="dist/bundle.js"></script>
+<noscript><p>Sorry, enabled JavaScript is needed.</p></noscript>
+</body>
+</html>

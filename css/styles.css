@@ -1,0 +1,370 @@
+@import url(reset.css);
+/*@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i');*/
+@import url('https://fonts.googleapis.com/css?family=Nunito+Sans:200,300,400,600');
+
+/* COMMON */
+
+body {
+    font-size: 1.35em;
+    font-family: 'Nunito Sans', sans-serif;
+    padding-left: 5%;
+    padding-right: 5%;
+    background-color: rgb(217, 237, 229);
+    top: 0;
+    left: 0;
+}
+
+h1 {
+    color: #555555;
+    font-size: 4rem;
+    font-weight: 300;
+}
+
+article {
+    padding: 5px;
+    margin: 10px 0 0 5px;
+    font-size: 0.9rem;
+    text-align: start;
+}
+
+article > h2 {
+    font-size: 1.5rem;
+}
+
+article > p {
+    margin: 10px 0 0 5px;
+    font-weight: 400;
+}
+
+.wrapper {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.container {
+    padding: 10px;
+    background: #ffffff;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin: 45px auto;
+    box-shadow: 0 2px 0 0 rgba(0, 0, 0, 0.1);
+}
+
+.element {
+    color: #ffffff;
+    padding: 15px;
+    margin: 5px;
+    background: #294147;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 4px;
+    text-align: center;
+}
+
+/* HEADER */
+
+.header {
+    /* padding-left: 6px; */
+    height: 88px;
+}
+
+.font-effect-anaglyph {
+    text-shadow: -0.02em 0 red, 0.02em 0 cyan;
+}
+
+/* MENU */
+
+.game-menu {
+    flex-basis: 19%;
+    user-select: none;
+    cursor: default;
+}
+
+.disabled {
+    -webkit-animation-name: fadeIn;
+    -webkit-animation-duration: 1.5s;
+    -webkit-animation-timing-function: ease-out;
+    animation-name: fadeIn;
+    animation-duration: 1.5s;
+    animation-timing-function: ease-out;
+    opacity: 0.4;
+    cursor: default;
+}
+
+button, html [type=button], [type=reset], [type=submit] {
+    -webkit-appearance: button;
+}
+
+.border222 {
+    border-radius: 3px;
+    background-color: #008CBA;
+    color: white;
+}
+
+.border2 {
+    border-radius: 3px;
+    background-color: white;
+    color: black;
+    border: 2px solid #008CBA;
+}
+
+.btn {
+    background-color: rgba(208, 198, 98, 0.83);
+    border: none;
+    color: #FFFFFF;
+    padding: 10px 15px;
+    text-align: center;
+    -webkit-transition-duration: 0.4s;
+    transition-duration: 0.4s;
+    margin: 7px 0;
+    text-decoration: none;
+    font-size: 16px;
+    cursor: default;
+}
+
+.btn span {
+    font-weight: inherit;
+}
+
+.btn.btn-start {
+    background-color: rgb(67, 175, 95);
+}
+
+.btn.btn-stop {
+    background-color: rgb(175, 77, 80);
+}
+
+.btn.hidden {
+    visibility: hidden;
+}
+
+button, select {
+    text-transform: none;
+}
+
+button, input {
+    overflow: visible;
+}
+
+button, input, select, textarea {
+    font: inherit;
+    margin: 0;
+}
+
+.game-menu > ul > li > button, .game-menu > ul > li > div {
+    font-weight: 100;
+    width: 100%;
+}
+
+.game-menu > ul > li > button:hover, .game-menu > ul > li > div:hover {
+     font-weight: 300;
+     background-color: rgba(255, 255, 255, 0.17);
+ }
+
+.badge {
+    display: inline-block;
+    min-width: 2.1em;
+    padding: 0.3em;
+    border-radius: 50%;
+    font-size: .5rem;
+    /* text-align: center; */
+    background: rgba(0, 0, 0, 0.18);
+    vertical-align: middle;
+    /* color: #fefefe; */
+}
+
+.styled-select select {
+    background: rgba(41, 65, 71, 0.26);
+    border: none;
+    font-size: 0.7rem;
+    font-weight: 100;
+    padding: 5px;
+    color: #d9ede5;
+}
+
+.rounded select {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+}
+
+select > optgroup {
+    background-color: #294147;
+}
+
+
+
+/* GAME AREA */
+
+.game-field {
+    min-height: 730px;
+    flex-basis: 81%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: space-between;
+    justify-content: space-between;
+}
+
+.flip-container{
+    margin: 10px;
+}
+
+.default {
+    background: #294147 url(../images/cardpack-01/skirt.png);
+}
+
+.cardpack-02 {
+    background: rgba(87, 42, 0, 0.41) url(../images/cardpack-02/skirt.jpg);
+}
+
+.game-element > .front, .game-element > .back{
+    background-size: cover;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    width: 200px;
+    height: 330px;
+    border: 1px solid #4CAF50;
+}
+
+.game-element > .back.opened-0, .game-element > .front.opened-0 {
+    background: #294147 url(../images/cardpack-01/tarot_card_0.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-1, .game-element > .front.opened-1 {
+    background: #294147 url(../images/cardpack-01/tarot_card_1.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-2, .game-element > .front.opened-2 {
+    background: #294147 url(../images/cardpack-01/tarot_card_2.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-3, .game-element > .front.opened-3 {
+    background: #294147 url(../images/cardpack-01/tarot_card_3.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-4, .game-element > .front.opened-4 {
+    background: #294147 url(../images/cardpack-01/tarot_card_4.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-5, .game-element > .front.opened-5 {
+    background: #294147 url(../images/cardpack-01/tarot_card_5.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-6, .game-element > .front.opened-6 {
+    background: #294147 url(../images/cardpack-01/tarot_card_6.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-7, .game-element > .front.opened-7 {
+    background: #294147 url(../images/cardpack-01/tarot_card_7.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-8, .game-element > .front.opened-8 {
+    background: #294147 url(../images/cardpack-01/tarot_card_8.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-9, .game-element > .front.opened-9 {
+    background: #294147 url(../images/cardpack-01/tarot_card_9.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-10, .game-element > .front.opened-10 {
+    background: #294147 url(../images/cardpack-01/tarot_card_10.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-11, .game-element > .front.opened-11 {
+    background: #294147 url(../images/cardpack-01/tarot_card_11.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-12, .game-element > .front.opened-12 {
+    background: #294147 url(../images/cardpack-01/tarot_card_12.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-13, .game-element > .front.opened-13 {
+    background: #294147 url(../images/cardpack-01/tarot_card_13.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-14, .game-element > .front.opened-14 {
+    background: #294147 url(../images/cardpack-01/tarot_card_14.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-15, .game-element > .front.opened-15 {
+    background: #294147 url(../images/cardpack-01/tarot_card_15.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-16, .game-element > .front.opened-16 {
+    background: #294147 url(../images/cardpack-01/tarot_card_16.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-17, .game-element > .front.opened-17 {
+    background: #294147 url(../images/cardpack-01/tarot_card_17.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-18, .game-element > .front.opened-18 {
+    background: #294147 url(../images/cardpack-01/tarot_card_18.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-19, .game-element > .front.opened-19 {
+    background: #294147 url(../images/cardpack-01/tarot_card_19.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-20, .game-element > .front.opened-20 {
+    background: #294147 url(../images/cardpack-01/tarot_card_20.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-21, .game-element > .front.opened-21 {
+    background: #294147 url(../images/cardpack-01/tarot_card_21.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-22, .game-element > .front.opened-22 {
+    background: #294147 url(../images/cardpack-01/tarot_card_22.png);
+    background-size: cover;
+}
+
+.game-element > .back.opened-23, .game-element > .front.opened-23 {
+    background: #294147 url(../images/cardpack-01/tarot_card_23.png);
+    background-size: cover;
+}
+
+.game-element > .back:hover, .game-element > .front:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.3), 0 6px 20px 0 rgba(0, 0, 0, 0.29);
+}
+
+
+
+/* Footer */
+
+footer {
+    display: flex;
+    flex-direction: row-reverse;
+}
+
+footer > span {
+    color: #555555;
+    font-size: 0.7rem;
+    font-weight: 300;
+    margin-right: 5px;
+}
